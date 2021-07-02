@@ -118,6 +118,14 @@
 }
 
 .fix-consultation-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid var(--dark-input-grey);
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
   border-color: var(--dark-primary-blue);
 }
 
@@ -133,10 +141,17 @@
   line-height: 1.2rem;
 }
 .service-01 {
+  padding-left: 0.5rem;
+  font-family: "Nexa-Bold";
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   color: var(--dark-primary-blue);
 }
 
 .servicenum-01 {
+  font-family: "Nexa-Bold";
+  font-size: 1rem;
+  line-height: 1.2rem;
   color: var(--light-primary-blue);
 }
 
@@ -165,6 +180,10 @@
   font-size: 0.8rem;
 }
 
+.image-hidden{
+  display: none;
+}
+
 .doctors {
   display: flex;
   flex-direction: column;
@@ -186,6 +205,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.hide-doc-carousel{
+  display: none;
 }
 .doctorImage-section {
   display: flex;
@@ -255,7 +278,7 @@ figcaption {
   width: 0.6rem;
   border-radius: 50%;
   background: var(--doctor-toggle-gray);
-  margin-right: 0.5rem;
+  margin: 0.5rem;
 }
 
 .highlited-toggle__button {
@@ -264,6 +287,10 @@ figcaption {
   background: transparent;
   border-radius: 50%;
   border: 2.5px solid var(--highlighted-toggle-blue);
+}
+
+.hide-treatments-images{
+  display: none;
 }
 
 .treatments {
@@ -406,6 +433,11 @@ figcaption {
     padding: 0.8rem;
   }
 
+  .fix-consultation-block{
+    width: 45%;
+    padding: 0.8rem;
+  }
+
   .service-tag {
     padding-left: 0.75rem;
     font-size: 1rem;
@@ -417,21 +449,33 @@ figcaption {
     line-height: 1.2rem;
   }
 
+  .service-01{
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  .servicenum-01 {
+    font-family: "Nexa-Bold";
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
   .service-imageBlock {
     align-self: flex-end;
     position: absolute;
     top: 0%;
-    right: 7%;
-    width: 45%;
+    right: 0%;
+    width: 50%;
+    bottom: 0;
   }
 
   .service-image {
-    width: 80%;
+    width: 90%;
     margin-bottom: 0;
   }
 
   .service-image img {
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .doctors-block {
@@ -593,7 +637,12 @@ figcaption {
   }
 
   .fix-consultation-block {
-    border-color: var(--how-it-works-list-blue);
+    width: 40%;
+    padding: 3rem 2rem;
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    text-align: left;
+    border: 2.5px solid var(--how-it-works-list-blue);
   }
 
   .service-tag {
@@ -609,10 +658,13 @@ figcaption {
 
   .servicenum-01 {
     color: var(--how-it-works-list-blue);
+    font-size: 1.7rem;
   }
 
   .service-01 {
     color: var(--search-btn-desktop);
+    padding-left: 3rem;
+    font-size: 1.6rem;
   }
 
   .how-it-works__services {
@@ -621,12 +673,12 @@ figcaption {
   }
   .service-imageBlock {
     top: 0%;
-    right: 3%;
-    width: 50%;
+    right: 0%;
+    width: 60%;
   }
 
   .service-image {
-    width: 75%;
+    width: 80%;
     margin-bottom: 0;
   }
 

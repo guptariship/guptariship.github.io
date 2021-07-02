@@ -459,8 +459,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0.75rem;
+  padding: 0.5rem;
 }
+
+.hide-tests-container{
+  display: none;
+}
+
 
 .test-type-container {
   display: flex;
@@ -470,24 +475,24 @@
   height: 12rem;
   width: 48%;
   box-shadow: 3px -1px 9px 4px rgba(0, 0, 0, 0.05);
-  /* margin:0.5rem 0.5rem 0 0.5rem; */
+  margin:0.2rem;
 }
 
-.vitamin-profile-container {
+ /* #vitamin-profile-container {
   margin-right: 0.65rem;
 }
 
-.thyroid-profile-container {
+#thyroid-profile-container {
   margin: 0.65rem 0.65rem 0 0;
 }
 
-.liver-profile-container {
+#liver-profile-container {
   margin-top: 0.65rem;
-}
+}  */
 .test-figure {
   height: 3rem;
   margin: 1.25rem;
-}
+} 
 
 .test-name {
   font-size: 1rem;
@@ -517,6 +522,10 @@
 }
 
 .toggle-blue {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  margin: 0.25rem;
   background-color: #0173b2;
 }
 
@@ -593,6 +602,9 @@
   width: 90%;
 }
 
+.attribute-category{
+  cursor: pointer;
+}
 .attribute-title {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -602,6 +614,50 @@
   font-size: 0.75rem;
   line-height: 1.5rem;
 }
+
+.accordion-item-header::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f078";
+  border-radius: 50%;
+  background: #e5f1f7;
+  height: 1.2rem;
+  width: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0174b4;
+  font-size: 0.65rem;
+  transition: transform 0.3 s ease-in-out;
+}
+
+/* .accordion-item-header.active::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f077";
+  border-radius: 50%;
+  background: #e5f1f7;
+  height: 1.2rem;
+  width: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0174b4;
+  font-size: 0.65rem;
+} */
+
+.accordion-item-header.active::after {
+  transform: rotate(180deg);
+}
+
+.accordion-item-body{
+  display:none;
+}
+
+.accordion-item-header.active + .accordion-item-body{
+  display:block;
+}
+
 
 #tvastra-plus-footer {
   background: #2a2d3e;
@@ -635,10 +691,6 @@
     height: 31rem;
   }
 
-  .plans-main-container {
-    /* left: 2rem;
-    right: 2rem; */
-  }
   .plans-section-heading-title {
     font-size: 1.55rem;
   }
@@ -1276,6 +1328,18 @@
     align-items: start;
     height: 14rem;
   }
+
+  #vitamin-profile-container {
+    margin-right: 0.5rem;
+}
+
+  #thyroid-profile-container {
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+#liver-profile-container {
+  margin-top: 0;
+}
 
   .test-figure {
     height: 3.25rem;
